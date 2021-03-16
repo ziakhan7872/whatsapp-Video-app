@@ -17,6 +17,10 @@ import VideoScreens from './screens/VideoScreens/index';
 import CreateGroupScreen from './screens/CreateGroupScreen/index';
 import SettingsScreen from './screens/SettingsScreen/index';
 import CreateGroupNameScreen from './screens/CreateGroupNameScreen/index';
+import AgreeAndContinue from './screens/AgreeAndContinue/index';
+import AddContactNumber from './screens/AddContactNumber/index';
+import VerifyYourNumber from './screens/VerifyYourNumber/index';
+import PasswordScreen from './screens/PasswordScreen/index';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 
 const Stack = createStackNavigator();
@@ -73,7 +77,29 @@ function App({navigation}) {
             headerStyle: {backgroundColor: '#075E54'},
             headerTintColor: '#fff',
             headerTitleStyle: {fontWeight: 'bold'},
+            initialRouteName: 'AgreeAndContinue',
           }}>
+          <Stack.Screen
+            name="AgreeAndContinue"
+            component={AgreeAndContinue}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="AddContactNumber"
+            component={AddContactNumber}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="VerifyYourNumber"
+            component={VerifyYourNumber}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="PasswordScreen"
+            component={PasswordScreen}
+            options={{headerShown: false}}
+          />
+
           <Stack.Screen
             name="TabStack"
             component={TabStack}
